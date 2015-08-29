@@ -5,12 +5,16 @@ const ObjectId = Schema.ObjectId
 
 const News = new Schema({
   title: { type: String, required: true },
-  text: { type: String },
+  summary: { type: String },
   published: { type: Date, required: true },
   image: { type: String },
-  url: { type: String }
+  url: { type: String },
+  source: { type: String, required: true, enum: ['clarin', 'lanacion'] },
+  category: { type: String, enum: ['politics', 'economics', 'sports', 'world', 'general'] }
 })
 
 News.index({ published: -1 })
+News.index({ source: -1 })
+News.index({ category: -1 })
 
 export default mongoose.model('News', News)
