@@ -10,7 +10,7 @@ const News = new Schema({
   image: { type: String },
   url: { type: String },
   source: { type: String, required: true, enum: ['clarin', 'lanacion'] },
-  category: { type: String, enum: ['politics', 'economics', 'sports', 'world', 'general'] }
+  category: { type: String, enum: ['politics', 'economics', 'sports', 'world', 'general', 'tech', 'society'] }
 })
 
 News.index({ published: -1 })
