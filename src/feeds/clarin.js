@@ -24,7 +24,7 @@ export default function (url, category) {
           url: item.link,
           published: item.pubdate,
           source: 'clarin',
-          category: 'politics'
+          category: category
         })
       })
     })
