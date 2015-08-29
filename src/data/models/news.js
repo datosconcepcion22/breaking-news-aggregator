@@ -9,7 +9,7 @@ const News = new Schema({
   published: { type: Date, required: true },
   image: { type: String },
   url: { type: String },
-  source: { type: String, required: true, enum: ['clarin', 'lanacion', 'infobae', 'cronista', 'tiempo'] },
+  source: { type: String, required: true, enum: ['clarin', 'lanacion', 'infobae', 'cronista', 'tiempo', 'losandes'] },
   category: { type: String, enum: ['politics', 'economics', 'sports', 'world', 'general', 'tech', 'society'] }
 })
 

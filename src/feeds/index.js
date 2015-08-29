@@ -6,6 +6,7 @@ import * as clarinSociedad from './clarin-sociedad'
 import * as infobae from './infobae'
 import * as cronista from './cronista'
 import * as tiempo from './tiempo'
+import * as losandes from './losandes'
 
 export function updateAll () {
   clarinPolitica.update()
@@ -16,4 +17,5 @@ export function updateAll () {
   infobae.update()
   cronista.update()
   tiempo.update()
+  losandes.update()
 }
