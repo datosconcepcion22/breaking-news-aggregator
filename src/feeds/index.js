@@ -3,6 +3,7 @@ import * as clarinDeportes from './clarin-deportes'
 import * as clarinMundo from './clarin-mundo'
 import * as clarinEconomia from './clarin-economia'
 import * as clarinSociedad from './clarin-sociedad'
+import * as infobae from './infobae'
 
 export function updateAll () {
   clarinPolitica.update()
@@ -10,4 +11,5 @@ export function updateAll () {
   clarinMundo.update()
   clarinEconomia.update()
   clarinSociedad.update()
+  infobae.update()
 }
