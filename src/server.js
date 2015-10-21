@@ -1,9 +1,9 @@
-import debug from 'debug'
-import Hapi from 'hapi'
-import jwt from 'hapi-auth-jwt2'
-import swagger from 'hapi-swagger'
-import pack from '../package'
-import config from './config'
+var debug = require('debug')
+var Hapi = require('hapi')
+var jwt = require('hapi-auth-jwt2')
+var swagger = require('hapi-swagger')
+var pack = require('../package')
+var config = require('./config')
 
 const log = debug('promise-tracker-api:server')
 
@@ -61,4 +61,5 @@ server.register({
  * Expose the server instance, as a singleton
  */
 
-export default server
+module.exports = server
+

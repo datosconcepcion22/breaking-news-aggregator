@@ -1,16 +1,13 @@
-import debug from 'debug'
-import News from '../models/news'
+var News = require('../models/news')
 
-const log = debug('breaking-news-aggregator:data:api:news')
-
-export function latest (options, cb) {
+module.exports.latest = function latest (options, cb) {
   News
     .find(options)
     .sort({ published: -1 })
     .exec((err, res) => cb(err, res))
 }
 
-export function getLastUpdate(query, cb) {
+module.exports.getLastUpdate = function getLastUpdate(query, cb) {
   News
   .findOne(query)
   .sort({ published: -1 })
@@ -25,8 +22,8 @@ export function getLastUpdate(query, cb) {
   })
 }
 
-export function create (data, cb) {
-  let news = new News()
+module.exports.create = function create (data, cb) {
+  var news = new News()
   news.title = data.title
   news.summary = data.summary
   news.published = data.published
@@ -37,8 +34,9 @@ export function create (data, cb) {
   news.save(cb)
 }
 
-export function remove (query, cb) {
+module.exports.remove = function remove (query, cb) {
   News.findOneAndRemove(query, cb)
 }
 
-export default News
+module.exports.News = News
+

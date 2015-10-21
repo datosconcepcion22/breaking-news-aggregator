@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+var mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 const ObjectId = Schema.ObjectId
@@ -17,4 +17,5 @@ News.index({ published: -1 })
 News.index({ source: -1 })
 News.index({ category: -1 })
 
-export default mongoose.model('News', News)
+module.exports = mongoose.model('News', News)
+

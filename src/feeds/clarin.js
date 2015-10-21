@@ -1,13 +1,13 @@
-import debug from 'debug'
-import FeedMe from 'feedme'
-import request from 'superagent'
-import * as News from '../data/api/news'
+var debug = require('debug')
+var FeedMe = require('feedme')
+var request = require('superagent')
+var News = require('../data/api/news')
 
-export default function (url, category) {
+module.exports = function clarin (url, category) {
   const log = debug('breaking-news-aggregator:feeds:clarin-' + category)
 
   function onfetch (data) {
-    let items = data.items
+    var items = data.items
     log('fetched %d items', items.length)
 
     News.getLastUpdate({ source: 'clarin', category: category }, (err, lastUpdate) => {
@@ -46,3 +46,4 @@ export default function (url, category) {
     }
   }
 }
+

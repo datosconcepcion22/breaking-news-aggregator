@@ -1,8 +1,8 @@
-import debug from 'debug'
-import server from '../server'
-import error from 'boom'
-import * as News from '../data/api/news'
-import * as Feeds from '../feeds'
+var debug = require('debug')
+var server = require('../server')
+var error = require('boom')
+var News = require('../data/api/news')
+var Feeds = require('../feeds')
 
 const log = debug('breaking-news-aggregator:api')
 
@@ -45,4 +45,5 @@ server.route({
   }
 })
 
-export default server
+module.exports = server
+

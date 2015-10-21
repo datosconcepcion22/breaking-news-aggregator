@@ -1,3 +1,3 @@
-import clarin from './clarin'
+var clarin = require('./clarin')
 
-export default clarin('http://www.clarin.com/rss/mundo/', 'world')
+module.exports = clarin('http://www.clarin.com/rss/mundo/', 'world')

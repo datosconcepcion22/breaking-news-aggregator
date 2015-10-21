@@ -1,14 +1,15 @@
-import * as clarinPolitica from './clarin-politica'
-import * as clarinDeportes from './clarin-deportes'
-import * as clarinMundo from './clarin-mundo'
-import * as clarinEconomia from './clarin-economia'
-import * as clarinSociedad from './clarin-sociedad'
-import * as infobae from './infobae'
-import * as cronista from './cronista'
-import * as tiempo from './tiempo'
-import * as losandes from './losandes'
+var clarinPolitica = require( './clarin-politica')
+var clarinDeportes = require( './clarin-deportes')
+var clarinMundo = require( './clarin-mundo')
+var clarinEconomia = require( './clarin-economia')
+var clarinSociedad = require( './clarin-sociedad')
+var infobae = require( './infobae')
+var cronista = require( './cronista')
+var tiempo = require( './tiempo')
+var losandes = require( './losandes')
+var bae = require( './bae')
 
-export function updateAll () {
+module.exports = function updateAll () {
   clarinPolitica.update()
   clarinDeportes.update()
   clarinMundo.update()

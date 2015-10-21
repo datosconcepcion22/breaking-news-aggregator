@@ -1,8 +1,8 @@
-import debug from 'debug'
-import './src/api'
-import server from './src/server'
-import mongoose from 'mongoose'
-import config from './src/config'
+var debug = require('debug')
+require('./src/api')
+var server = require('./src/server')
+var mongoose = require('mongoose')
+var config = require('./src/config')
 
 const log = debug('breaking-news-aggregator:main')
 

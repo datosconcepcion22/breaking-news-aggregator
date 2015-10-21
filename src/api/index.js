@@ -1,1 +1,2 @@
-import './news'
+require('./news')
+
