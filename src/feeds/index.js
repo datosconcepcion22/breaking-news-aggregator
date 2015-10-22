@@ -8,6 +8,7 @@ var cronista = require( './cronista')
 var tiempo = require( './tiempo')
 var losandes = require( './losandes')
 var bae = require( './bae')
+var minutouno = require('./minutouno')
 
 module.exports.updateAll = function updateAll () {
   clarinPolitica.update()
@@ -20,7 +21,7 @@ module.exports.updateAll = function updateAll () {
   tiempo.update()
   losandes.update()
   bae.update()
-  // http://www.minutouno.com/contenidos/rss.html
+  minutouno.update()
   // http://www.bigbangnews.com/pages/rss.html
   //
 }
