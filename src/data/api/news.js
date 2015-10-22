@@ -7,7 +7,7 @@ module.exports.latest = function latest (options, cb) {
     .exec((err, res) => cb(err, res))
 }
 
-module.exports.getLastUpdate = function getLastUpdate(query, cb) {
+module.exports.getLastUpdate = function getLastUpdate (query, cb) {
   News
   .findOne(query)
   .sort({ published: -1 })
