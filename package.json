@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "Breaking news aggregator",
   "main": "index.js",
-  "engines" : {
-    "node" : ">=4.0.0"
+  "engines": {
+    "node": ">=4.0.0"
   },
   "scripts": {
     "start": "node index.js",
