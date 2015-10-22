@@ -8,6 +8,10 @@ module.exports = function Atom (opts) {
   const log = debug('breaking-news-aggregator:feeds:' + opts.source)
 
   function onfetch (data) {
+    if (!data || !data.items) {
+      log('No data received')
+      return
+    }
     var items = data.items
     log('fetched %d items', items.length)
 
