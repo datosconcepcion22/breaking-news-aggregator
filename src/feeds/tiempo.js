@@ -29,7 +29,7 @@ function onfetch (data) {
   })
 }
 
-module.exports = function update () {
+module.exports.update = function update () {
   log('requested update')
   const parser = new FeedMe(true)
   request
