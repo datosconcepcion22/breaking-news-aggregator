@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\api",
+    "\\src\\data",
+    "\\src\\data\\api",
+    "\\src\\data\\models",
+    "\\src\\feeds",
+    "\\src\\util"
+  ],
+  "SelectedNode": "\\src\\data\\api\\news.js",
+  "PreviewInSolutionExplorer": false
+}

@@ -11,7 +11,7 @@ const log = debug('breaking-news-aggregator:main')
  */
 
 log('Connecting to database')
-mongoose.connect(config.dbURI)
+mongoose.connect(config.dbURI, { useMongoClient: true })
 
 /*
  * Launch server
